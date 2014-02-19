@@ -2,7 +2,7 @@ var SLIDE_CONFIG = {
   // Slide settings
   settings: {
     title: 'Mobile Web-App',
-    subtitle: '"Hybryds App"',
+    subtitle: '"Hybrids App"',
     eventInfo: {
      title: 'Lab @Ismin',
      date: '26/02/2013'
@@ -28,13 +28,6 @@ var SLIDE_CONFIG = {
     // twitter: '@yourhandle',
     // www: 'http://www.you.com',
     github: 'http://github.com/ulybu'
-  }/*, {
-    name: 'Second Name',
-    company: 'Job Title, Google',
-    gplus: 'http://plus.google.com/1234567890',
-    twitter: '@yourhandle',
-    www: 'http://www.you.com',
-    github: 'http://github.com/you'
-  }*/]
+  }]
 };
 
