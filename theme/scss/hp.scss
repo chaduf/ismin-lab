@@ -301,6 +301,11 @@ ul {
 		& > li {
 			margin-bottom: 1em;
 		}
+	}	
+	&.indent {
+		& > li {
+			margin-left: 2.5em;
+		}
 	}
 	li {
 		margin-bottom: 0.5em;
