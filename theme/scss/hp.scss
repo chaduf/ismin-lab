@@ -321,11 +321,21 @@ ul {
 		}
 	}
 
-	> li:before {
+	> li{
+		&:before {
 		content: '\00B7';
 		margin-left: -1em;
 		position: absolute;
 		font-weight: 600;
+		}
+		&.check:before {
+			content: '\2713';
+			margin-left: -1.5em;
+		}
+		&.ballot:before {
+			content: '\2717';
+			margin-left: -1.5em;
+		}
 	}
 
 	ul {
