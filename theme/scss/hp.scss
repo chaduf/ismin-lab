@@ -331,10 +331,12 @@ ul {
 		&.check:before {
 			content: '\2713';
 			margin-left: -1.5em;
+			font-weight: 400;
 		}
 		&.ballot:before {
 			content: '\2717';
 			margin-left: -1.5em;
+			font-weight: 400;
 		}
 	}
 
