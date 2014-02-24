@@ -322,35 +322,57 @@ URL: https://code.google.com/p/io-2012-slides
 			<footer class="source">Ben Combee - A Deep Dive into Enyo</footer>
 		</article>
 	</slide>
-	<slide> <!-- ENYO - Kinds -->
+	<slide> <!-- ENYO - Kinds - oop -->
 		<hgroup>
 			<h2>Kinds</h2>
 			<h3>Oop !</h3>
 		</hgroup>
-		<article>
-			<p></p>
+		<article class="build">
 			<pre class="prettyprint" data-lang="javascript">
 enyo.kind({
-    name: “obsessiveHello”,
-    kind: “communicator”,
+    name: "obsessiveHello",
+    <b>girl  : ""</b>,
     goEasy: function() {
-        <b>this.inherited(arguments);</b> 
-        for(var i=0; i&lt;50; i++){
-            system.sayToTheGirl("Hello !");
+        for(var i=0; i&lt;143; i++){
+            system.sayToTheGirl("Hello " + <b>this.girl</b> + "!");
         }
     }
 });
-var hello = new obsessiveHello();
+var hello = new obsessiveHello(<b>{girl: "Lucille"}</b>);
 hello.goEasy();
 //  watch her go away</pre>
+		<p>default kind : <code>"enyo.Object"</code>, getter/setter, oberservers</p>
 		</article>
-		<aside class="note">
-			<section>
-				<ul>
+		<aside class="note"><section><ul>
 					<li></li>
-				</ul>
-			</section>
-		</aside>
+		</ul></section></aside>
+	</slide>
+	<slide> <!-- ENYO - Kinds - inheritance-->
+		<hgroup>
+			<h2>Kinds</h2>
+			<h3>Inherithance</h3>
+		</hgroup>
+		<article>
+			<pre class="prettyprint" data-lang="javascript">
+enyo.kind({
+    name: "communicator",
+    girl: "",
+    goEasy: function(){
+    	this.checkGirl(this.girl);	
+    }
+});
+enyo.kind({
+    name: "obsessiveHello",
+    <b>kind: "communicator",</b>
+    goEasy: function() {
+        <b>this.inherited(arguments);</b> 
+        for(var i=0; i&lt;50; i++){ ... }
+    }
+});</pre>
+		</article>
+		<aside class="note"><section><ul>
+			<li>intanciation and function call are unchanged</li>
+		</ul></section></aside>
 	</slide>
 	<slide> <!-- ENYO - Boot -->
 		<hgroup>
