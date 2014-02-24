@@ -304,6 +304,54 @@ URL: https://code.google.com/p/io-2012-slides
 			<footer class="source">unwiredben - enyo for chrome app</footer>
 		</article>
 	</slide>
+	<slide> <!-- ENYO - Features -->
+		<hgroup>
+			<h2>More, please</h2>
+			<h3>Features</h3>
+		</hgroup>
+		<article>
+			<ul class="highlight-cont spaced">
+				<li class="highlight">Encapsulation Object, Heritage - <code>Kinds</code> et <code>Components</code></li>
+				<li class="highlight">View et DOM widget model - <code>UiComponent</code> and <code>Control</code></li>
+				<li>Event routing - Dispatcher and Signals</li>
+				<li>Services model - Async and Ajax</li>
+				<li>Composants HTML basique - Base UI</li>
+				<li>Support du tactil - Scroller Tactil et simulation gestuelle</li>
+				<li class="highlight">Package loader - <code>enyo.depends()</code> et <i>package.js</i></li>
+			</ul>
+			<footer class="source">Ben Combee - A Deep Dive into Enyo</footer>
+		</article>
+	</slide>
+	<slide> <!-- ENYO - Kinds -->
+		<hgroup>
+			<h2>Kinds</h2>
+			<h3>Oop !</h3>
+		</hgroup>
+		<article>
+			<p></p>
+			<pre class="prettyprint" data-lang="javascript">
+enyo.kind({
+    name: “obsessiveHello”,
+    kind: “communicator”,
+    goEasy: function() {
+        <b>this.inherited(arguments);</b> 
+        for(var i=0; i&lt;50; i++){
+            system.sayToTheGirl("Hello !");
+        }
+    }
+});
+var hello = new obsessiveHello();
+hello.goEasy();
+//  watch her go away</pre>
+		</article>
+		<aside class="note">
+			<section>
+				<ul>
+					<li></li>
+				</ul>
+			</section>
+		</aside>
+	</slide>
 	<slide>
 		<hgroup>
 			<h2>Code Slide (with Subtitle Placeholder)</h2>
