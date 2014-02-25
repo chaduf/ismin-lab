@@ -322,17 +322,17 @@ URL: https://code.google.com/p/io-2012-slides
 			<footer class="source">Ben Combee - A Deep Dive into Enyo</footer>
 		</article>
 	</slide>
-	<slide class="segue nobackground"> <!-- ENYO -->
+	<slide class="segue dark nobackground"> <!-- ENYO Kinds-->
 		<aside class="gdbar bottom right"><img src="images/HP_logo_128.png"></aside>
 		<hgroup class="auto-fadein">
 			<h2 class="gray4">Kinds</h2>
 			<h3>OOP :)</h3>
 		</hgroup>
 	</slide>
-	<slide> <!-- ENYO - Kinds - oop -->
+	<slide> <!-- ENYO - Kinds -->
 		<hgroup>
 			<h2>Kinds</h2>
-			<h3>Oop !</h3>
+			<h3></h3>
 		</hgroup>
 		<article class="build">
 			<pre class="prettyprint" data-lang="javascript">
@@ -381,10 +381,17 @@ enyo.kind({
 			<li>intanciation and function call are unchanged</li>
 		</ul></section></aside>
 	</slide>
+	<slide class="segue dark nobackground"> <!-- ENYO Components-->
+		<aside class="gdbar bottom right"><img src="images/HP_logo_128.png"></aside>
+		<hgroup class="auto-fadein">
+			<h2>Components</h2>
+			<h3>Encapsulation, Events</h3>
+		</hgroup>
+	</slide>
 	<slide> <!-- ENYO - Components-->
 		<hgroup>
 			<h2>Components</h2>
-			<h3>Firing events</h3>
+			<h3>It always start with a kind</h3>
 		</hgroup>
 		<article>
 		<p style="font-style: italic;">“ A component is an Enyo kind that can publish properties, expose events, and contain other components. ”</p>
@@ -407,7 +414,7 @@ enyo.kind({
 	<slide> <!-- ENYO - Components-->
 		<hgroup>
 			<h2>Components</h2>
-			<h3>Catching events</h3>
+			<h3>Encapsulating them</h3>
 		</hgroup>
 		<article>
 		<pre class="prettyprint" data-lang="javascript">
@@ -432,7 +439,7 @@ enyo.kind({
 	<slide> <!-- ENYO - Components-->
 		<hgroup>
 			<h2>Components</h2>
-			<h3>Catching events</h3>
+			<h3>Playing with them</h3>
 		</hgroup>
 		<article>
 		<p>Syntaxic sugar : '$'</p>
@@ -440,7 +447,7 @@ enyo.kind({
 var badToys = new SithLords();
 badToys.$.DarthVader.setWeapon(lightsaber);
 badToys.$.DarthVader.throw(badToys.$.Palpatine);
-badToys.$.DarthVader.scream("NOOOOOOOooo...!"");</pre>
+badToys.$.DarthVader.scream("NOOOOOOOooo...!");</pre>
 		<ul class="build">
 			<li>scream is called</li>
 			<li>onSpeak is fired by DarthVader(with doSpeak)</li>
@@ -453,10 +460,17 @@ badToys.$.DarthVader.scream("NOOOOOOOooo...!"");</pre>
 		</ul></section></aside>
 	</slide>
 
+	<slide class="segue dark nobackground"> <!-- ENYO Kinds-->
+		<aside class="gdbar bottom right"><img src="images/HP_logo_128.png"></aside>
+		<hgroup class="auto-fadein">
+			<h2>Controls</h2>
+			<h3>Rendering engine for HTML</h3>
+		</hgroup>
+	</slide>
 	<slide> <!-- ENYO - Controls-->
 		<hgroup>
 			<h2>Controls</h2>
-			<h3>Rendering engine for HTML</h3>
+			<h3></h3>
 		</hgroup>
 		<article>
 		<p style="font-style: italic;">“ enyo.Control is a component that controls a DOM node (UI element) ”</p>
@@ -472,10 +486,18 @@ badToys.$.DarthVader.scream("NOOOOOOOooo...!"");</pre>
 			</li>
 		</ul></section></aside>
 	</slide>
+
+	<slide class="segue dark nobackground"> <!-- ENYO Kinds-->
+		<aside class="gdbar bottom right"><img src="images/HP_logo_128.png"></aside>
+		<hgroup class="auto-fadein">
+			<h2>enyo.depends</h2>
+			<h3>Modularity for your sources</h3>
+		</hgroup>
+	</slide>
 	<slide> <!-- ENYO - Boot -->
 		<hgroup>
 			<h2>Boot</h2>
-			<h3>Charger toutes les sources</h3>
+			<h3></h3>
 		</hgroup>
 		<article>
 			<p></p>
@@ -568,10 +590,6 @@ enyo.depends(
 	</slide>
 
 
-
-
-	<!-- ##########   T'en est LA -->
-
 	<slide class="thank-you-slide segue nobackground">
 		<aside class="gdbar right"><img src="images/HP_logo_128.png"></aside>
 		<article class="flexbox vleft auto-fadein">
@@ -652,11 +670,6 @@ enyo.depends(
 		</article>
 	</slide>
 
-	<slide class="logoslide dark nobackground">
-		<article class="flexbox vcenter">
-			<span><img src="images/google_developers_logo_white.png"></span>
-		</article>
-	</slide>
 
 	<slide class="backdrop"></slide>
 	
