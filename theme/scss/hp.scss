@@ -348,11 +348,11 @@ ul {
 // Code highlighting only effects the current slide.
 .highlight-code slide.current {
 	pre > * {
-		opacity: 0.25;
+		opacity: 0.35;
 		@include transition(opacity 0.5s ease-in);
 	}
 	.highlight-cont > * {
-		opacity: 0.25;
+		opacity: 0.35;
 		@include transition(opacity 0.5s ease-in);
 	}
 	b, .highlight {
