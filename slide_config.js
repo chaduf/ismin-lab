@@ -25,6 +25,7 @@ var SLIDE_CONFIG = {
     name: 'Ulysse Prygiel',
     company: 'Software Engineer<br>Hewlett-Packard',
     gplus: 'http://google.com/+ulysseprygiel',
+    slides: "http://ulybu.github.io/ismin-lab",
     // twitter: '@yourhandle',
     // www: 'http://www.you.com',
     github: 'http://github.com/ulybu'

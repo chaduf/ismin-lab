@@ -355,8 +355,18 @@ SlideDeck.prototype.loadConfig_ = function(config) {
 
       var github = p.github ? '<span>github</span><a href="' + p.github +
           '">' + p.github.replace(/https?:\/\//, '') + '</a>' : '';
-
-      var html2 = [gplus, twitter, www, github].join('<br>');
+     
+      var webSlides = p.slides ? '<span>slides</span><a href="' + p.slides +
+          '">' + p.slides.replace(/https?:\/\//, '') + '</a>' : '';
+      
+      var contactTab = [webSlides, gplus, twitter, www, github];
+      var html2 = [];
+      for (var ind in contactTab){
+        if(!! contactTab[ind]){
+          html2.push(contactTab[ind]);
+        }
+      }
+      html2 = html2.join('<br>');
 
       if (dataConfigContact) {
         dataConfigContact.innerHTML = html2;
