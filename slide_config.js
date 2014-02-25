@@ -1,7 +1,7 @@
 var SLIDE_CONFIG = {
   // Slide settings
   settings: {
-    title: 'Mobile Web-App',
+    title: 'Mobile Cross-platform<br> Development',
     subtitle: '"Hybrids App"',
     eventInfo: {
      title: 'Lab @Ismin',
