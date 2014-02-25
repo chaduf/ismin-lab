@@ -331,7 +331,7 @@ URL: https://code.google.com/p/io-2012-slides
 			<pre class="prettyprint" data-lang="javascript">
 enyo.kind({
     name: "obsessiveHello",
-    <b>girl  : ""</b>,
+    <b>girl: ""</b>,
     goEasy: function() {
         for(var i=0; i&lt;143; i++){
             system.sayToTheGirl("Hello " + <b>this.girl</b> + "!");
@@ -374,6 +374,102 @@ enyo.kind({
 			<li>intanciation and function call are unchanged</li>
 		</ul></section></aside>
 	</slide>
+	<slide> <!-- ENYO - Components-->
+		<hgroup>
+			<h2>Components</h2>
+			<h3>Firing events</h3>
+		</hgroup>
+		<article>
+		<p style="font-style: italic;">“ A component is an Enyo kind that can publish properties, expose events, and contain other components. ”</p>
+		<pre class="prettyprint" data-lang="javascript">
+enyo.kind({
+    name: "SithLord",
+    kind: "Jedi",
+    <b>events: { onSpeak: “” },</b> //on ne catch pas l'event => bubble up
+    scream: function(message) {
+        <b>doSpeak({
+            message: message,
+            tone: "whiney" });</b>
+    })
+});</pre>
+		</article>
+		<aside class="note"><section><ul>
+			<li>Illustre parfaitement a quel point une citation n'est jamais aussi edifiante qu'un exemple</li>
+		</ul></section></aside>
+	</slide>
+	<slide> <!-- ENYO - Components-->
+		<hgroup>
+			<h2>Components</h2>
+			<h3>Catching events</h3>
+		</hgroup>
+		<article>
+		<pre class="prettyprint" data-lang="javascript">
+enyo.kind({
+    name: "SithLords", // y'a un 's'
+    components: [
+        { kind: SithLord, name: "DarthVader",
+            onSpeak: “listenToToys” },
+        { kind: SithLord, name: "Palpatine" },
+        { kind: SithLord, name: "DarthSidious" },
+        { kind: Droid, name: "Grievous"}
+    ],
+    listenToToys: function(inSender, inEvent) {
+         alert(inEvent.mesage);
+    }
+});</pre>
+		</article>
+		<aside class="note"><section><ul>
+			<li></li>
+		</ul></section></aside>
+	</slide>
+	<slide> <!-- ENYO - Components-->
+		<hgroup>
+			<h2>Components</h2>
+			<h3>Catching events</h3>
+		</hgroup>
+		<article>
+		<p>Syntaxic sugar : '$'</p>
+		<pre class="prettyprint" data-lang="javascript">
+var badToys = new SithLords();
+badToys.$.DarthVader.setWeapon(lightsaber);
+badToys.$.DarthVader.throw(badToys.$.Palpatine);
+badToys.$.DarthVader.scream("NOOOOOOOooo...!"");</pre>
+		<ul class="build">
+			<li>scream is called</li>
+			<li>onSpeak is fired by DarthVader(with doSpeak)</li>
+			<li>badToys handle/catch onSpeak</li>
+			<li>badToys displayed the message</li>
+		</ul>
+		</article>
+		<aside class="note"><section><ul>
+			<li>check up: What's wrong with that code ? Palpatine should be the one screaming nooooo</li>
+		</ul></section></aside>
+	</slide>
+
+	<slide> <!-- ENYO - Controls-->
+		<hgroup>
+			<h2>Controls</h2>
+			<h3>Rendering engine for HTML</h3>
+		</hgroup>
+		<article>
+		<p style="font-style: italic;">“ enyo.Control is a component that controls a DOM node (UI element) ”</p>
+		<p>Exemple fonctionnel sur le jsFiddle suivant <a href="http://jsfiddle.net/ulybu/L6cSB/">jsfiddle.net/ulybu/L6cSB/</a></p>
+		
+		</article>
+		<aside class="note"><section><ul>
+			<li>2 type of handlers
+				<ul>
+					<li>observers</li>
+					<li>bubbling</li>
+				</ul>
+			</li>
+		</ul></section></aside>
+	</slide>
+
+
+
+
+	<!-- ##########   T'en est LA -->
 	<slide> <!-- ENYO - Boot -->
 		<hgroup>
 			<h2>Boot</h2>
@@ -399,8 +495,6 @@ enyo.depends(
 		</aside>
 	</slide>
 
-
-	<!-- ##########   T'en est LA -->
 	<slide>
 		<hgroup>
 			<h2>Code Slide (with Subtitle Placeholder)</h2>
